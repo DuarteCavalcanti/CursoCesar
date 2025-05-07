@@ -1,0 +1,1 @@
+print(f"{"Aproveite o brinquedo!" if int(input("Insira a idade: ")) >= 12 and float(input("Insira a altura em metros: ")) >= 1.50 else "Você ainda não pode usar esse brinquedo."}")
