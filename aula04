@@ -1,1 +1,8 @@
-ky,gy,g
+login = input("Digite seu login: ")
+senha = input("Digite sua senha: ")
+
+while login ==  senha: 
+    print("Login e senha são iguais. Digite novamente.")
+    login = input("Digite novamente seu login: ")
+    senha = input("Digite novamente sua senha: ")
+print("Senha e login corretos.")
