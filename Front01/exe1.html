@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-attachment: black;
+        background-color: rgba(0, 0, 0, 0.405);
+      }
+      .agua {
+        width: 200px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h2>Inscrições BBB</h2>
+      <img
+      src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/01/Robos-BBB-Casal.png"
+      alt="Imagem BBB" width="250" height="150"
+    </center>
+    />
+    <form>
+      <center>
+        <hr />
+        <label for="camp_nom">Nome: </label>
+        <input
+          id="camp_nom"
+          type="text"
+          placeholder="Digite seu nome"
+          required
+        />
+        <br /><br />
+        <label for="camp_idad">Idade: </label>
+        <input
+          id="camp_idad"
+          type="number"
+          placeholder="Informe sua idade"
+          required
+        />
+        <br /><br />
+        <label for="camp_email">E-mail: </label>
+        <input
+          id="camp_email"
+          type="email"
+          placeholder="Digite seu E-mail"
+          required
+        />
+        <br /><br />
+        <label for="camp_date">Nascimento: </label>
+        <input
+          id="camp_date"
+          type="date"
+          placeholder="Data de Nascimento"
+          required
+        />
+        <br /><br />
+        <label for="camp_hora">Hora: </label>
+        <input
+          id="camp_hora"
+          type="time"
+          placeholder="Informe a Hora"
+          required
+        />
+        <br /><br />
+        <hr />
+        <h3>Informe sua área</h3>
+        <input id="exatas" type="checkbox" />
+        <label for="exatas">Exatas</label>
+        <input id="human" type="checkbox" />
+        <label for="human">Humanas</label>
+        <input id="natu" type="checkbox" />
+        <label for="natu">Naturezas</label><br />
+        <hr />
+        <label for="estado">Selecione seu Estado: </label>
+        <select id="estado" required>
+          <option value="v0"></option>
+          <option value="v1">Pernambuco 1</option>
+          <option value="v2">Tinambucano</option>
+          <option value="v3">Joazeirense</option>
+          <option value="v4">Amapá</option>
+        </select>
+        <br /><br />
+        <label id="camp_text"
+          >Por que deseja participar do <strong>BBB-5208:</strong></label
+        ><br />
+        <input class="agua" id="camp_text" type="text" required />
+        <hr />
+        <input type="submit" value="Enviar" />
+      </center>
+    </form>
+    <hr />
+  </body>
+</html>
