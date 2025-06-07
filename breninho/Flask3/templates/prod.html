@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/index.css') }}">
+</head>
+<body>
+    <center>
+        <h2>Repositorio</h2>
+        <form action="/prod" method="POST">
+            <label for="nome">Nome: </label>
+            <input id="nome_prod" name="nome_prod" type="text" placeholder="Nome do produto"><br><br>
+
+            <label for="">Preço: </label>
+            <input id="preco" name="preco" type="number" placeholder="Preço do produto"><br><br>
+
+            <label for="">Descrição: </label> <br>
+            <textarea id="desc" name="desc"  placeholder="Descrição do produto"></textarea><br><br>
+
+            <label>Data de vencimento: </label><br><br>
+            <input type="date" name="data_vencimento" placeholder="Informe o vencimento" required><hr>
+
+            <button type="submit"> Enviar </button>
+        </form>
+
+    </center>
+
+        <h3>Usuários Cadastrados</h3>
+        <ul>
+            {% for usuario in usuarios %}
+                <li>
+                    Nome: {{ usuario.nome }}   <br>
+                    Email: {{ usuario.email }} <br>
+                    Número: {{ usuario.tell }} <br>
+                </li>
+            {% endfor %}
+        </ul>    
+
+        <h2>Produtos cadastrados: </h2>
+        {% if produtos %}
+        <ul>
+            {% for produto in produtos %}
+            <li>
+                <strong>Nome produto:</strong>  {{produtos.nome_prod | capitalize}}<br>
+                <strong>Preço</strong>  {{produtos.preco}}<br> 
+                <strong>Descrição:</strong> {{produtos.desc | capitalize}}<br>
+                <strong>Data de vencimento:</strong> {{produto.data_vencimento}}
+            </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum produto cadastrado</p>
+    {% endif %}
+</body>
+</html>
