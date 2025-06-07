@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
+</head>
+<body>
+    <h3>Cadastro</h3>
+    <form method="post">
+        Nome: <input type="text" name="nome"> <br>
+        Email: <input type="email" name="email"> <br>
+        Telefone: <input name="tell"> <br><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br><br><br><br>
+    <hr>
+    <br><br><br><br>
+    <center>
+    <h3>Usuários Cadastrados</h3>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>Nome: {{ usuario.nome }}
+                <br>Email: {{ usuario.email }}
+                <br>Número: {{ usuario.tell }}</li>
+        {% endfor %}
+    </center>
+    </ul>
+</body>
+</html>
